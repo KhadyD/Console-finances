@@ -86,3 +86,22 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+//Title 
+console.log("Financial Analysis")
+//Total number of months
+console.log("Total number of months: " + finances.length);
+//Net total
+const total = finances.reduce((acc, cur) => acc + cur[1], 0);
+console.log("Net Total: " + total);
+//Average change 
+var averageChange = total / finances.length;
+console.log("Average Change: " + averageChange);
+//Greatest Increase
+const HighestValue = Math.max(...finances.map(([month, value]) => value));
+console.log("Greatest Increase in Profits: " + HighestValue);
+
+//Greatest Decrease
+const lowestValue = Math.min(...finances.map(([month, value]) => value));
+console.log("Greatest Decrease in Profits: " + lowestValue);
+
